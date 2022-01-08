@@ -1,0 +1,597 @@
+/*
+For people I have a shortcut so that @@ → ›, e.g [[John Smith]] →  [[›John Smith]] and this is what gets the conditional highlighting to work
+For books I have a similar thing where [[§§some book]] → [[»some book]] and this gets the highlighting for books working
+*/
+
+@import url('https://neue-roam-theme.glitch.me/title.css');
+@import url('https://neue-roam-theme.glitch.me/body.css'); 
+
+.rm-bq {
+  background-color: #F2EFE1 !important;
+  border-radius: 5px !important;
+  border: 1px solid #D5CFB3 !important;
+  border-left: 5px solid #D5CFB3 !important;
+
+}
+/*https://neue-roam-theme.glitch.me/*/
+:root {
+    --header-font: 'Title';
+    --body-font: 'Body';
+    --bg-color: #f2efe2 ;
+    --light-bg-color: #eceae1;
+    --bullet-color: rgba(0, 0, 0, 0.2);
+    --color-highlight: #857C6E;
+    --color-primary: #ddd;
+    --color-primary-contrast: #FFFFFF;
+    --color-secondary: 147, 100, 235;
+    --color-secondary-contrast: #FFFFFF;
+}
+
+
+/*-----------------------COLOURS-----------------------*/
+
+/*--------------page link formating-------------*/
+.rm-page-ref--link {
+    color: #e5bb42 !important;
+  border-radius: 8px !important;;
+    padding: 3px 7px !important;;
+    font-weight: 600 !important;;
+}
+
+.rm-page-ref--link:hover {
+    color: #f6f5f1 !important;
+    background-color: #e5bb42 !important;
+    text-decoration:none!important;
+  	border-radius: 8px !important;;
+    padding: 3px 7px !important;;
+    font-weight: 600 !important;;
+}
+
+/* page link for PEOPLE formating*/
+span[data-link-title^="›"] .rm-page-ref--link{
+    color: #31b350 !important;
+    background-color: #d5ecd5;
+}
+span[data-link-title^="›"] .rm-page-ref--link:hover{
+    color: #ebeae7 !important;
+    background-color: #78d278 !important;
+}
+
+/* page link for PEOPLE CATEGORIES formating*/
+span[data-link-title^="*"] .rm-page-ref--link{
+    color: #e34825 !important;
+    background-color: #eed5cf;
+}
+span[data-link-title^="*"] .rm-page-ref--link:hover{
+    color: #ebeae7 !important;
+    background-color: #f26748 !important;
+}
+
+/* page link for BOOK*/
+span[data-link-title^="»"] .rm-page-ref--link{
+    color: #AB37DB !important;
+    background-color: #E8D9EE;
+}
+span[data-link-title^="»"] .rm-page-ref--link:hover{
+    color: #ebeae7 !important;
+    background-color: #AB37DB !important;
+}
+
+/* PAGE LINK read */
+span[data-link-title="Read"] .rm-page-ref--link{
+    color: #31b350 !important;
+    background-color: #d5ecd5;
+}
+span[data-link-title="Read"] .rm-page-ref--link:hover{
+    color: #ebeae7 !important;
+    background-color: #31b350 !important;
+}
+span[data-link-title="Read"] .rm-page-ref::after {
+  content:" ✔️";
+}
+
+/* PAGE LINK Unread */
+span[data-link-title="Unread"] .rm-page-ref--link{
+    color: #e34825 !important;
+    background-color: #eed5cf;
+}
+span[data-link-title="Unread"] .rm-page-ref--link:hover{
+    color: #ebeae7 !important;
+    background-color: #e34825 !important;
+}
+span[data-link-title="Unread"] .rm-page-ref::after {
+  content:" ❌";
+}
+
+
+
+/*--------------external link formating-------------*/
+a {
+    /*color: #e34825 !important;
+    background-color: #F2EFE1 !important;
+  */
+  	border-radius: 8px;
+    padding: 3px 7px;
+    font-weight: 600;
+}
+a::after {
+  content:" [↗︎]";
+  color: #e34825 !important;
+}
+
+
+/*--------------#TAG link formating-------------*/
+
+.rm-page-ref--tag {
+    color: #64B5F6 !important; 
+    background-color: #d8e3e3 !important;
+    border-radius: 8px;
+    padding: 3px 7px;
+    font-weight: 600;
+}
+.rm-page-ref--tag:hover {
+    color: #ebeae7 !important; 
+    background-color: #64B5F6 !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* TAG LINK AI */
+.rm-page-ref--tag[data-tag="AI"] {
+    color: #e34825 !important; 
+    background-color: #eed5cf !important;  
+}
+.rm-page-ref--tag[data-tag="AI"]:hover {
+    color: #ebeae7 !important; 
+    background-color: #e34825 !important;
+}
+
+/* #Tweets */
+span.rm-page-ref[data-tag="tweets"]:before {
+  content: "";
+  background-image: url("https://raw.githubusercontent.com/johan/svg-cleanups/master/logos/twitter.svg");
+  background-size: cover;
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 12px;
+  margin-right: .5em;
+}
+
+
+
+/*----------------*/
+[data--tag="make:wide-xxl"] ~ div {
+	width: 150% !important;
+}
+
+/* -------------------------- */
+/*        COLORS               */
+/* -------------------------- */
+
+
+.bp3-button.bp3-minimal:hover {
+  background: #0000004d;
+}
+
+.zoom-mentions-view > div {
+   color: var(--bullet-color) !important; 
+}
+
+.bp3-button:not([class*="bp3-intent-"]){
+    color: var(--bullet-color) !important;
+}
+
+.rm-reference-container .flex-h-box div > strong { 
+    color: var(--bullet-color) !important;
+}
+.rm-reference-main > div >  div:nth-child(2) .flex-h-box strong {
+    color: var(--bullet-color) !important;
+}
+
+.rm-orbit-tag{
+  background-color: var(--color-highlight) !important;
+  opacity: 0.5;
+}
+
+.bp3-icon, .bp3-button {
+  opacity: 0.7;
+}
+
+.bp3-icon-filter {
+  opacity: 0.2 !important;
+}
+
+.rm-level3 {
+  color: #aaa !important;
+}
+
+.zoom-path-view .rm-zoom-mask {
+  background: transparent !important;
+}
+
+.checkmark{
+  top: -1px !important;
+  border: 1px solid var(--bullet-color) !important;
+}
+
+html, body, #app, .roam-topbar, .bp3-input[type="search"]{
+  background-color: var(--bg-color) !important;
+}
+
+.rm-find-or-create-wrapper {
+  flex: 0 1 100% !important;
+}
+
+
+
+.check-container {
+  margin-right: 2px important;
+}
+
+.check-container input:checked ~ .checkmark {
+  background-color: var(--color-highlight) !important;
+}
+
+.rm-query {
+	border: 0.5px solid #ddd !important;
+}
+
+.rm-query-title {
+ color: var(--color-highlight) !important;
+ background-color: var(--light-bg-color) !important;
+}
+
+.rm-query-content > span {
+    opacity: 0.4;
+}
+
+.block-highlight-blue, .roam-sidebar-container {
+ background-color: var(--light-bg-color) !important;
+    box-shadow: none !important;
+}
+
+#buffer {
+opacity: 0.5
+}
+
+hr {
+  border-top: 1px solid #ccc !important;
+}
+
+.rm-embed-container,
+.rm-reference-item,
+.rm-block-ref:hover{
+    background-color: var(--light-bg-color) !important;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+.log-button {
+    color: var(--color-highlight) !important;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    color: var(--color-highlight) !important;
+}
+
+.log-button:hover{
+    background-color: var(--light-bg-color) !important;
+    color: var(--color-highlight) !important;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
+    background-color: var(--light-bg-color) !important;
+    color: var(--color-highlight) !important;  
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover {
+	background-color: var(--light-bg-color) !important;
+    color: var(--color-highlight) !important;  
+}
+
+.rm-db-title{
+  color: var(--color-highlight) !important;  
+}
+
+.bp3-button[class*="bp3-icon-"]::before {
+  opacity: 0.3 !important;
+}
+
+/* -------------------------- */
+/*        FONTS               */
+/* -------------------------- */
+
+body,
+div,
+textarea,
+.level2 {
+    font-family: var(--body-font) !important;
+}
+
+.rm-title-display {
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    height: auto !important;
+    line-height: 1.5 !important;
+    font-family: var(--header-font) !important;
+}
+
+.rm-level1  {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+.rm-level2  {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.rm-level3  {
+    font-size: 16px !important;
+    font-weight: bold;
+    margin-top: -3px !important
+}
+
+.log-button {
+  font-weight: 300 !important;
+}
+
+/* -------------------------- */
+/*        BULLETS             */
+/* -------------------------- */
+
+.version-bullet {
+    background-color: rgb(var(--color-primary)) !important;
+    color: var(--color-primary-contrast) !important;
+}
+
+
+/* -------------------------- */
+/*        RIGHT SIDEBAR       */
+/* -------------------------- */
+
+#right-sidebar {
+  background-color: #eae6d6; /*var(--bg-color) !important;*/   
+}
+
+#right-sidebar #roam-right-sidebar-content > div[style] {
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--bg-color)  !important;
+}
+
+/* -------------------------- */
+/*        LEFT SIDEBAR        */
+/* -------------------------- */
+
+/* HIDE LOGO*/
+
+#roam-sidebar-logo {
+    display: none;
+}
+
+
+/* -------------------------- */
+/*        SAME SIZE SIDEBAR   */
+/* -------------------------- */
+
+/* Main block - remove centering */
+
+.roam-center > div:first-child {
+  padding-right: calc(0.5 * (100% - 740px)) !important;
+  padding-left: calc(0.5 * (100% - 740px)) !important;
+}
+
+.roam-body .roam-app .roam-main .roam-article .rm-title-display {
+  margin-bottom: 10px;
+}
+
+
+h1.level2 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    font-family: "FH Ronaldson" !important;
+    
+}
+
+h1.level2 > a {
+  color: #000 !important;
+}
+
+.roam-center {
+  --align-item: left;
+  flex-basis: 40% !important;
+} 
+
+/* -------------------------- */
+/*       MISC                 */
+/* -------------------------- */
+
+.roam-log-container .roam-log-page {
+  border-top: 0px solid;
+}
+
+div.starred-pages-wrapper > div.flex-h-box {
+  display: none !important;
+}
+
+.starred-pages-wrapper > div:first-child {
+  margin-top: 9px !important;
+  background-color: transparent !important;
+}
+
+.roam-table th, .roam-table td, .roam-table tr {
+    min-width: 50px !important;
+}
+
+
+/* -------------------------- */
+/*       Amazing Bullets      */
+/* -------------------------- */
+
+.controls {
+    flex: 0 0 36px;
+    padding-top: 4px;
+    padding-left: 0px;
+  	margin-right: 5px;
+}
+span.bp3-icon-standard {
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 0px;
+    padding-top: 2px;
+}
+.roam-bullet-closed, #right-sidebar .roam-bullet-closed {
+  background-color: var(--light-bg-color) !important;
+  filter: contrast(0.9);
+  opacity: 0.9;
+}
+
+#right-sidebar .roam-bullet-closed, .rm-reference-item .roam-bullet-closed{
+  background-color: var(--light-bg-color) !important;
+  filter: contrast(0.9);
+  opacity: 0.9;
+}
+.controls .simple-bullet-outer {
+    height: 20px;
+    width: 20px;
+    margin-top: -1px;
+}
+.controls .simple-bullet-outer .simple-bullet-inner {
+    background-color: var(--bullet-color) !important;
+  	width: 8px;
+  	height: 8px;
+}
+/* Align vertical lines and remove choppiness */
+.block-border-left {
+    margin-left: 5px;
+  	border-radius: 0;
+  	padding-left: 8px;
+  	padding-bottom: 5px;
+}
+
+
+
+/* -------------------------- */
+/*       Kanban               */
+/* -------------------------- */
+
+.kanban-board {
+    max-width: 100% !important;
+    padding: 2px !important;
+    background: none !important;
+}
+.kanban-board .kanban-column {
+    border-radius: 6px !important;
+    background: var(--bg-color) !important;
+}
+.kanban-board .kanban-column[style=""] {
+    background: var(--bg-color) !important;
+}
+.kanban-board .kanban-column .kanban-title {
+    border-bottom: 1px solid var(--light-bg-color) !important;
+}
+.kanban-board .kanban-column .kanban-card {
+    background: var(--light-bg-color) !important;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 4px 6px rgba(0, 0, 0, 0.02) !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    font-size: 15px !important;
+}
+
+
+/* -------------------------- */
+/*       All Pages            */
+/* -------------------------- */
+
+.rm-all-pages .table .rm-pages-row.rm-pages-row-header {
+    background-color: var(--light-bg-color) !important;
+    color: var(--color-highlight) !important;
+}
+
+.rm-all-pages .table .rm-pages-row .rm-pages-title-col {
+        color: var(--color-highlight) !important;
+}
+
+.sorted-header-text{
+        color: var(--color-highlight) !important;
+}
+
+.rm-clickable-pill{
+  background-color: var(--color-highlight) !important;
+  color: white !important;
+  opacity: 0.6 !important;
+}
+
+.rm-all-pages .table .rm-pages-row {
+            color: var(--color-highlight) !important;
+}
+
+.rm-pages-toolbar .toolbar-search-group .search-input {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--color-primary) !important;
+}
+
+
+.bp3-button .bp3-icon, .bp3-button .bp3-icon-standard, .bp3-button .bp3-icon-large {
+    opacity: 0.4 !important;
+}
+
+.bp3-button .bp3-icon:first-child:last-child, .bp3-button .bp3-spinner+.bp3-icon:last-child {
+    opacity: 0.4 !important;
+}
+
+
+/* -------------------------- */
+/*       Buttons              */
+/* -------------------------- */
+
+.rm-query-content > span {
+    opacity: 0.4;
+}
+.rm-pomodoro {
+    opacity: 1 !important;
+    border: 1px solid var(--bullet-color) !important;
+    background: var(--light-bg-color)  !important;
+    color: #000 !important;
+    font-weight: 100;
+}
+
+.rm-pomodoro > span {
+    opacity: 1;
+    color: var(--color-highlight);
+    font-weight: 100;
+}
+
+.running {
+    opacity: 1.0 !important;
+}
+
+.running > span {
+    opacity: 1;
+    color: #000 !important;
+}
+
+
+.bp3-button:not([class*="bp3-intent-"]) {
+    color: #000 !important;
+}
+
+.bp3-button:not([class*="bp3-icon"]) {
+   background: var(--light-bg-color)  !important;
+   opacity: 1 !important;
+   font-weight: 100;
+}
+
+.bp3-icon-calendar{
+   background: var(--light-bg-color)  !important;
+   opacity: 1 !important;
+   font-weight: 100;
+    
+}
+
+.bp3-button.bp3-minimal{
+   background: none !important;
+   opacity: 1 !important;
+   font-weight: 100;
+}
