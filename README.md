@@ -5,6 +5,7 @@ This is pretty wide ranging, mainly it changes the colour pallet, fonts, and has
 to quickly get books and people to highlight differently.
 * People shortcut so that [[@@John Smith]] →  [[›John Smith]] 
 * Books shortcut so that [[§§some book]] → [[»some book]] 
+
 These then trigger rules in the css file to get people to show up green and book purple.
 
 
