@@ -1,8 +1,3 @@
-/*
-For people I have a shortcut so that @@ → ›, e.g [[John Smith]] →  [[›John Smith]] and this is what gets the conditional highlighting to work
-For books I have a similar thing where [[§§some book]] → [[»some book]] and this gets the highlighting for books working
-*/
-
 @import url('https://neue-roam-theme.glitch.me/title.css');
 @import url('https://neue-roam-theme.glitch.me/body.css'); 
 
