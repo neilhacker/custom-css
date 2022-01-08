@@ -1,0 +1,14 @@
+/* must also be in print mode off (unticked in the view menu) */
+/* inspired by https://github.com/devonzuegel/digital-nesting/blob/master/google-docs/google-docs.css */
+
+.kix-page-canvas-compact-mode {
+    border-top: none!important; 
+}
+
+.kix-page-paginated .kix-stacked-tile-page-shadow{
+    box-shadow: none!important;
+}
+
+.kix-document-top-shadow, #spellGrammarCheckButton, #printButton, #undoButton, #redoButton, #clearFormattingButton, #clearFormattingSeparator {
+    display: none;
+}
