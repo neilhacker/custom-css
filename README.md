@@ -1,8 +1,12 @@
 Some custom css scripts for sites to make them nicer.
 
 ### Roam
-This is pretty wide ranging, mainly it changes the colour pallet, fonts, and has a host of conditional highlighting for things 
-like people and books
+This is pretty wide ranging, mainly it changes the colour pallet, fonts, and has a host of conditional highlighting. I've used keyboard shortcuts 
+to quickly get books and people to highlight differently.
+* People shortcut so that [[@@John Smith]] →  [[›John Smith]] 
+* Books shortcut so that [[§§some book]] → [[»some book]] 
+These then trigger rules in the css file to get people to show up green and book purple.
+
 
 ### Google docs
 Gets rid of page breaks so document looks like it is infinite page.
