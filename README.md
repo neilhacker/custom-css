@@ -8,7 +8,9 @@ to quickly get books and people to highlight differently.
 
 These then trigger rules in the css file to get people to show up green and book purple.
 
-[`screenshots/roam_before.png`](screenshots/roam_before.png)
+<img width="40%" src="screenshots/roam_before.png" /><img width="40%" src="screenshots/roam_after.png" />
+
+
 
 ### Google docs
 Gets rid of page breaks so document looks like it is infinite page.
