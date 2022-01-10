@@ -8,7 +8,7 @@ to quickly get books and people to highlight differently.
 
 These then trigger rules in the css file to get people to show up green and book purple.
 
-<img width="40%" src="screenshots/roam_before.png" /><img width="40%" src="screenshots/roam_after.png" />
+<img width="60%" src="screenshots/roam_before.png" /><img width="60%" src="screenshots/roam_after.png" />
 
 
 
