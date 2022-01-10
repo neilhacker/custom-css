@@ -15,11 +15,15 @@ These then trigger rules in the css file to get people to show up green and book
 ### Google docs
 Gets rid of page breaks so document looks like it is infinite page.
 
+<img width="60%" src="screenshots/docs_before.png" /><img width="60%" src="screenshots/docs_after.png" />
+
 ### Twitter
 removes entire right hand side so you don't have trending news, follow suggestions etc. Also removes some icons from the left menu 
 I never used. Honestly getting rid of trending news is the best upgrade to my twitter experience.
 
-### Stylus
+<img width="60%" src="screenshots/twitter_before.png" /><img width="60%" src="screenshots/twitter_after.png" />
+
+### Implementation
 I use stylus for my twitter and google doc themes.
 * Install stylus (https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 * Under "Actions" click "write a new style"
