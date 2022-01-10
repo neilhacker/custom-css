@@ -14,8 +14,7 @@ Gets rid of page breaks so document looks like it is infinite page.
 
 ### Twitter
 removes entire right hand side so you don't have trending news, follow suggestions etc. Also removes some icons from the left menu 
-I never used. Honestly getting rid of trending news is the best upgrade to my twitter experience. One thing to note is that this is
-made for the 'Dim' setting, if you are on a different setting you will currently see an empty box on the right hand side. 
+I never used. Honestly getting rid of trending news is the best upgrade to my twitter experience.
 
 ### Stylus
 I use stylus for my twitter and google doc themes.
