@@ -21,7 +21,7 @@ Gets rid of page breaks so document looks like it is infinite page.
 removes entire right hand side so you don't have trending news, follow suggestions etc. Also removes some icons from the left menu 
 I never used. Honestly getting rid of trending news is the best upgrade to my twitter experience.
 
-<img width="60%" src="screenshots/twitter_before.png" /><img width="60%" src="screenshots/twitter_after.png" />
+<img width="60%" src="screenshots/twitter_before2.png" /><img width="60%" src="screenshots/twitter_after2.png" />
 
 ### Implementation
 I use stylus for my twitter and google doc themes.
